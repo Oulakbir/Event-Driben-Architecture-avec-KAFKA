@@ -16,7 +16,7 @@ public class PageEventRestController {
     private StreamBridge streamBridge;
     @GetMapping("/publish/{topic}/{name}")
     public PageEvent publish(@PathVariable String topic, @PathVariable String name){
-        PageEvent pageEvent=new PageEvent(name,Math.random()>0.5?"tarekoufakir":"U2",new Date(),new Random().nextInt(9000));
+        PageEvent pageEvent=new PageEvent(name,Math.random()>0.5?"ilhamoulakbir":"U2",new Date(),new Random().nextInt(9000));
         streamBridge.send(topic,pageEvent);
         return pageEvent;
     }
